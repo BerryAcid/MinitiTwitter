@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.auth.profile.ProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewAvatarProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_logo_minituiter_mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextUserNameProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/hint_username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAvatarProfile" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUserNameProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextUserNameProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserNameProfile" />
+
+    <EditText
+        android:id="@+id/editTextPasswordProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailProfile"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescriptionProfile" />
+
+    <Button
+        android:id="@+id/button_save_changes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/blue"
+        android:text="@string/buttom_save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordProfile" />
+
+    <Button
+        android:id="@+id/button_change_pass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/bottom_mod_pass"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/button_save_changes"
+        app:layout_constraintStart_toStartOf="@+id/button_save_changes"
+        app:layout_constraintTop_toBottomOf="@+id/button_save_changes" />
+
+    <EditText
+        android:id="@+id/editTextWebsiteProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/website"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailProfile" />
+
+    <EditText
+        android:id="@+id/editTextDescriptionProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/description_user"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWebsiteProfile"
+        app:layout_constraintStart_toStartOf="@+id/editTextWebsiteProfile"
+        app:layout_constraintTop_toBottomOf="@+id/editTextWebsiteProfile" />
+</androidx.constraintlayout.widget.ConstraintLayout>
